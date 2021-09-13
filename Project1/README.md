@@ -3,6 +3,7 @@
 To run main() in Linux:
 
 g++ main.cpp -o main.exe
+
 ./main.exe
 
 To produce plot for problem 1:
