@@ -18,6 +18,7 @@ std::vector<double> solve_general_tridiagonal_matrix_equation(std::vector<std::v
 
 // Definitions
 void run_problem2(int N) {
+
     // Compute values for u(x)
     std::vector<double> x = get_vector_x(N);
     std::vector<double> res = u_vectorize(x, N);
@@ -48,7 +49,7 @@ std::vector<double> get_vector_x(int N) {
 
     // Define x values
     std::vector<double> x(N, 0.0);
-    double h = (xN - xN)/(N-1);
+    double h = (xN - x1)/(N-1);
     for (int i = 0; i < N; i++) {
         x.at(i) = h*i;
     };
