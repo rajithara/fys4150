@@ -14,12 +14,11 @@ std::string vector_to_string(std::vector<double> vec, int N); // For testing pur
 int main() {
 
     // Produce results for problem 1
-    int N = 10; // Number of x values (spacing)
+    int N = 100; // Number of x values (spacing)
     run_problem2(N);
 
-    // 
-    std::vector<std::vector<double>> A = get_matrix_A(N);
-    std::vector<double> v = solve_general_tridiagonal_matrix_equation(A, N);
+    //std::vector<std::vector<double>> A = get_matrix_A(N);
+    //std::vector<double> v = solve_general_tridiagonal_matrix_equation(A, N);
 
     return 0;
 }
