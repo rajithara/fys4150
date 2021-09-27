@@ -13,7 +13,7 @@ N_min, N_max = N_info[0,0], N_info[1,0]
 N = np.arange(N_min, N_max+1)
 I = np.zeros(N.size)
 for idx in range(N.size):
-    N[idx] = I_mat[idx, 0]
+    I[idx] = I_mat[idx, 0]
 
 # Plot
 fig, ax = plt.subplots()
