@@ -66,7 +66,7 @@ void sort_solution_pairs(arma::mat &eigenvectors, arma::vec &eigenvalues) {
 
 // Compare a numerical solution against the analytical solution
 void compare_numerical_and_analytical(const arma::mat eigenvectors, const arma::vec eigenvalues, int N) {
-    double tol = 10e-4;
+    double tol = 10e-8;
     bool comparison_failed = 0;
     for (int i = 0; i < N; i++) {
         double lambda = 0;

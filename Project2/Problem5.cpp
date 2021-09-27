@@ -1,6 +1,6 @@
 #include "utils.hpp"
-#include <string>
 
+// Compare the numerical Jaboci method with the analytical solution
 int main(){
 
     // Set up the tridiagonal matrix

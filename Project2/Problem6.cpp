@@ -27,7 +27,6 @@ int main() {
         I_vec(I_idx, 0) = iterations;
         I_idx++;
     }
-
     // Save the values of the iterration function I(N) as a binary (Armadillo) file
     // as well information about N_min and N_max
     I_vec.save("iterations_vector.bin");

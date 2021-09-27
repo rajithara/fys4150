@@ -2,7 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pyarma as pa
 
-# Extract the binary filed obtained in Problem6.cpp
+## Problem 6
+###################################################
+
+# Extract the binary files obtained in Problem6.cpp
 I_mat = pa.mat()
 N_info = pa.mat()
 I_mat.load("iterations_vector.bin")
@@ -18,7 +21,7 @@ for idx in range(N.size):
 # Plot
 fig, ax = plt.subplots()
 ax.plot(N, I)
-ax.set_title('Plot of the number of iterations before convergence')
+ax.set_title(f'Plot of the number of iterations before convergence\nNmin={int(N_min)}. Nmax={(int(N_max))}')
 plt.xlabel('N')
 plt.ylabel('I(N)', rotation=0)
-fig.savefig("problem6_plot.pdf")
+fig.savefig("problem6a_plot.pdf")
