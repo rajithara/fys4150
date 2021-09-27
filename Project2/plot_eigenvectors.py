@@ -37,7 +37,7 @@ fig.savefig("problem7_n10_plot.pdf")
 fig, ax = plt.subplots()
 for i in range(3):
     ax.plot(x_99, u_99_list[i])
-ax.set_title("n=10")
+ax.set_title("n=100")
 plt.xlabel(r'$\hat{x}$')
 plt.ylabel(r'$u(\hat{x})$', rotation=0)
 fig.savefig("problem7_n100_plot.pdf")
