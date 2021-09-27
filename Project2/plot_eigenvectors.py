@@ -12,17 +12,17 @@ eigvec_9.load("eigvec_9.bin")
 eigvec_99.load("eigvec_99.bin")
 
 # Convert to numpy
-eigvec_9_arr = np.zeros([9, 3])
-eigvec_99_arr = np.zeros([99, 3])
+eigvec_9_arr = np.zeros([10, 3]) # boundary points invluded
+eigvec_99_arr = np.zeros([100, 3]) # boundary points invluded
 for j in range(3):
     for i in range(9):
-        eigvec_9_arr[i, j] = eigvec_9[i, j]
+        eigvec_9_arr[i+1, j] = eigvec_9[i, j]
     for i in range(99):
-        eigvec_99_arr[i, j] = eigvec_99[i, j]
+        eigvec_99_arr[i+1, j] = eigvec_99[i, j]
 
 # Plot
-x_9 = np.arange(9)/9
-x_99 = np.arange(99)/99
+x_9 = np.arange(10)/10
+x_99 = np.arange(100)/100
 u_9_list = [eigvec_9_arr[:, col] for col in range(3)]
 u_99_list = [eigvec_99_arr[:, col] for col in range(3)]
 
@@ -38,6 +38,6 @@ fig, ax = plt.subplots()
 for i in range(3):
     ax.plot(x_99, u_99_list[i])
 ax.set_title("n=10")
-plt.xlabel(r'^x')
-plt.ylabel(r'u(^x)', rotation=0)
+plt.xlabel(r'$^x$')
+plt.ylabel(r'$u(^x)$', rotation=0)
 fig.savefig("problem7_n100_plot.pdf")
